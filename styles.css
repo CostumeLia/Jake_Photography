@@ -50,7 +50,7 @@ h1, h2 {
     color: #333;
 }
 
-/* Carousel */
+/* --- UPDATED CAROUSEL STYLE --- */
 .carousel-container {
     width: 100%;
     overflow: hidden;
@@ -58,14 +58,15 @@ h1, h2 {
 }
 
 .carousel {
-    width: 667%;
+    width: 870%;
     display: flex;
-    animation: carousel-slide 70s linear infinite;
+    animation: carousel-slide 90s linear infinite;
 }
 
 .carousel-track {
     display: flex;
     width: 100%;
+    align-items: center;
 }
 
 .carousel-slide {
@@ -89,7 +90,7 @@ h1, h2 {
     }
 }
 
-/* --- NEW GALLERY WALL STYLE --- */
+/* Gallery Wall Style */
 .gallery-grid {
     column-count: 1;
     column-gap: 25px;
@@ -97,13 +98,10 @@ h1, h2 {
 }
 
 .gallery-item {
-    /* Style the item to look like a framed piece of art */
     background-color: #333;
     padding: 15px;
     border: 1px solid #ccc;
     box-shadow: 0 7px 15px rgba(0,0,0,0.15);
-
-    /* The masonry layout */
     margin-bottom: 25px;
     break-inside: avoid;
     display: inline-block;
@@ -262,7 +260,7 @@ footer {
     width: 100%;
 }
 
-/* --- RESPONSIVE DESIGN FOR GALLERY AND ABOUT PAGE --- */
+/* Responsive Design */
 @media (min-width: 768px) {
     .gallery-grid {
         column-count: 2;
