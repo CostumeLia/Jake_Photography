@@ -58,9 +58,9 @@ h1, h2 {
 }
 
 .carousel {
-    width: 400%;
+    width: 667%;
     display: flex;
-    animation: carousel-slide 40s linear infinite;
+    animation: carousel-slide 70s linear infinite;
 }
 
 .carousel-track {
@@ -69,8 +69,7 @@ h1, h2 {
 }
 
 .carousel-slide {
-    /* Each slide takes up 1/24th of the total track width. */
-    width: calc(100% / 24);
+    width: calc(100% / 40);
     padding: 0 10px;
     box-sizing: border-box;
 }
@@ -80,7 +79,6 @@ h1, h2 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
 
 @keyframes carousel-slide {
     0% {
