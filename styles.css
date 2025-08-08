@@ -58,9 +58,9 @@ h1, h2 {
 }
 
 .carousel {
+    width: 400%;
     display: flex;
-    width: 200%;
-    animation: carousel-slide 20s linear infinite;
+    animation: carousel-slide 40s linear infinite;
 }
 
 .carousel-track {
@@ -69,8 +69,8 @@ h1, h2 {
 }
 
 .carousel-slide {
-    flex: 0 0 auto;
-    width: calc(100% / 6); /* Adjust based on the number of visible thumbnails */
+    /* Each slide takes up 1/24th of the total track width. */
+    width: calc(100% / 24);
     padding: 0 10px;
     box-sizing: border-box;
 }
@@ -81,9 +81,14 @@ h1, h2 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+
 @keyframes carousel-slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* Gallery */
