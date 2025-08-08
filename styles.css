@@ -42,7 +42,7 @@ main {
 }
 
 .home-container, .about-container {
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
 }
 
@@ -50,7 +50,7 @@ h1, h2 {
     color: #333;
 }
 
-/* --- UPDATED CAROUSEL STYLE --- */
+/* Carousel Style */
 .carousel-container {
     width: 100%;
     overflow: hidden;
@@ -90,7 +90,8 @@ h1, h2 {
     }
 }
 
-/* Gallery Wall Style */
+
+/* --- UPDATED GALLERY WALL STYLE --- */
 .gallery-grid {
     column-count: 1;
     column-gap: 25px;
@@ -111,8 +112,10 @@ h1, h2 {
 }
 
 .gallery-item:hover {
-    transform: scale(1.03);
+    transform: scale(1.03) !important;
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    z-index: 10;
+    position: relative;
 }
 
 .gallery-item img {
@@ -123,6 +126,14 @@ h1, h2 {
     box-shadow: none;
     transition: none;
 }
+
+.gallery-item:nth-child(5n) {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    position: relative;
+    z-index: 5;
+}
+
 
 /* About Page */
 .about-content {
@@ -260,7 +271,7 @@ footer {
     width: 100%;
 }
 
-/* Responsive Design */
+/* --- UPDATED RESPONSIVE DESIGN FOR GALLERY --- */
 @media (min-width: 768px) {
     .gallery-grid {
         column-count: 2;
@@ -279,5 +290,19 @@ footer {
 @media (min-width: 1200px) {
     .gallery-grid {
         column-count: 3;
+    }
+}
+
+/* ADDED: New breakpoint for 4 columns on wide screens */
+@media (min-width: 1600px) {
+    .gallery-grid {
+        column-count: 4;
+    }
+}
+
+/* ADDED: New breakpoint for 5 columns on extra-wide screens */
+@media (min-width: 2000px) {
+    .gallery-grid {
+        column-count: 5;
     }
 }
