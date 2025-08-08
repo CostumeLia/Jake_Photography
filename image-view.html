@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Image - Photography Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="image-view-container">
+        <div class="full-image-wrapper">
+            <img id="full-resolution-image" src="" alt="Full Resolution Image">
+        </div>
+        <div class="image-actions">
+            <a href="gallery.html" class="back-link">Back to Gallery</a>
+            <a id="download-link" href="" download class="download-btn">Download Image</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Name Photography</p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const imageUrl = urlParams.get('img');
+
+            if (imageUrl) {
+                const fullImage = document.getElementById('full-resolution-image');
+                const downloadLink = document.getElementById('download-link');
+
+                fullImage.src = imageUrl;
+                downloadLink.href = imageUrl;
+            }
+        };
+    </script>
+</body>
+</html>
