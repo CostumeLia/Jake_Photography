@@ -161,12 +161,24 @@ main {
     border: 1px solid #444;
 }
 
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #b5884d;
+}
+
+.about-text {
+    text-align: center;
+    max-width: 700px;
 }
 
 .contact-form {
@@ -211,6 +223,7 @@ main {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
 .submit-btn:hover {
@@ -251,9 +264,8 @@ footer {
 /* --- RESPONSIVE DESIGN --- */
 @media (min-width: 768px) {
     .gallery-grid { column-count: 2; }
-    .about-content { flex-direction: row; text-align: left; }
-    .about-text { padding-left: 40px; }
 }
+
 @media (min-width: 1200px) { .gallery-grid { column-count: 3; } }
 @media (min-width: 1600px) { .gallery-grid { column-count: 4; } }
 @media (min-width: 2000px) { .gallery-grid { column-count: 5; } }
