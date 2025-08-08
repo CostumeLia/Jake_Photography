@@ -89,24 +89,41 @@ h1, h2 {
     }
 }
 
-/* Gallery */
+/* --- NEW GALLERY WALL STYLE --- */
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    column-count: 1;
+    column-gap: 25px;
     margin-top: 2rem;
+}
+
+.gallery-item {
+    /* Style the item to look like a framed piece of art */
+    background-color: #333;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 7px 15px rgba(0,0,0,0.15);
+
+    /* The masonry layout */
+    margin-bottom: 25px;
+    break-inside: avoid;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 .gallery-item img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.05);
+    display: block;
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
 }
 
 /* About Page */
@@ -245,8 +262,12 @@ footer {
     width: 100%;
 }
 
-/* Responsive Design */
+/* --- RESPONSIVE DESIGN FOR GALLERY AND ABOUT PAGE --- */
 @media (min-width: 768px) {
+    .gallery-grid {
+        column-count: 2;
+    }
+
     .about-content {
         flex-direction: row;
         text-align: left;
@@ -254,5 +275,11 @@ footer {
 
     .about-text {
         padding-left: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .gallery-grid {
+        column-count: 3;
     }
 }
